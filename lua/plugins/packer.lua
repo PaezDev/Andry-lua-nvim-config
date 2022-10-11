@@ -1,4 +1,9 @@
-vim.cmd [[packadd packer.nvim]]
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  vim.cmd [[packadd packer.nvim]]
+end
 
 return require('packer').startup(function()
         -- Packer just manages itself
@@ -90,7 +95,6 @@ return require('packer').startup(function()
                  event = "InsertEnter",
         }
 
-
         -- Auto tag
         use {
                 "windwp/nvim-ts-autotag",
@@ -105,7 +109,6 @@ return require('packer').startup(function()
 	    use 'simrat39/rust-tools.nvim'
 	    use 'mfussenegger/nvim-dap'
 	    use 'nvim-lua/popup.nvim'
-
 
         -- Automatically set up your configuration after cloning packer.nvim
     	-- Put this at the end after all plugins
