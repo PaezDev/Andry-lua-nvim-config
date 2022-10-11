@@ -105,6 +105,13 @@ return require('packer').startup(function()
                 end,
         }
 
+        use { 
+                'anuvyklack/pretty-fold.nvim',
+                config = function()
+                        require('pretty-fold').setup()
+                end
+        }
+
         -- Rust
 	    use 'simrat39/rust-tools.nvim'
 	    use 'mfussenegger/nvim-dap'
