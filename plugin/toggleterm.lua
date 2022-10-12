@@ -9,7 +9,7 @@ local lazygit = Terminal:new({
 })
 
 local terminal1 = Terminal:new({
-    direction = "float",
+    direction = "tab",
 })
 
 function _lazygit_toggle()
@@ -20,5 +20,5 @@ function terminal1_toggle()
     terminal1:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>lua terminal1_toggle()<CR>', {noremap = true, silent = true})
