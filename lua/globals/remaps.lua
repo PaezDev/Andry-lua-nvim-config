@@ -14,6 +14,7 @@ map('n', '<C-l>', '<C-w>l', options)
 -- Buffer controls
 map('n', '<S-l>', '<cmd>bn<CR>', options) -- buffer next
 map('n', '<S-h>', '<cmd>bp<CR>', options) -- buffer previous
+map('n', '<S-c>', '<cmd>bd<CR>', options ) -- buffer delete
 -- Window splitting
 map('n', '<leader>ws', '<C-w>s', options) -- horizontal
 map('n', '<leader>wv', '<C-w>v', options) -- vertical
@@ -29,6 +30,6 @@ map("n", "<Down>", ":resize -1<CR>", silent_opts)
 -- Terminal in new tab
 map('n', '<leader>t', '<cmd>tabnew<CR><cmd>term<CR>', options)
 -- Edit init.lua config file
-map('n', '<leader>nc', '<cmd>tabnew<CR><cmd>e ~/.config/nvim/init.lua<CR>', options)
+map('n', '<leader>nc', '<cmd>tabnew<CR><cmd>e ~/.config/nvim/lua/remaps.lua<CR>', options)
 -- Escape maps to a rolling jk
 map('i', 'jk', '<esc>', options)

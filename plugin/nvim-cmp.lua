@@ -91,3 +91,4 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 require('lspconfig')['gopls'].setup {}
+require('lspconfig')['sumneko_lua'].setup {}
