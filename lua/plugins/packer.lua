@@ -19,7 +19,7 @@ return require('packer').startup(function()
 	    use 'williamboman/nvim-lsp-installer'
         
         -- Luasnip (primarily for hrsh7th/nvim-cmp)
-	    use 'L3MON4D3/LuaSnip'
+	    use { "L3MON4D3/LuaSnip", run = "make install_jsregexp" }
 	    use 'saadparwaiz1/cmp_luasnip'
 
         -- Load spicy gruvbox color theme
