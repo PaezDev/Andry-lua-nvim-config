@@ -9,7 +9,7 @@ local lazygit = Terminal:new({
 })
 
 local terminal1 = Terminal:new({
-    direction = "tab",
+    direction = "float",
 })
 
 function _lazygit_toggle()
