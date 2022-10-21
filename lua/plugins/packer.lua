@@ -23,7 +23,7 @@ return require('packer').startup(function()
 	    use 'saadparwaiz1/cmp_luasnip'
 
         -- Load spicy gruvbox color theme
-	    use 'gruvbox-community/gruvbox'
+	    use 'ellisonleao/gruvbox.nvim'
 
         -- Treesitter is life
 	    use {
