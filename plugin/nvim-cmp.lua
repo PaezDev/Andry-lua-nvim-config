@@ -88,32 +88,23 @@ cmp.setup.cmdline(':', {
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local nvim_lsp = require('lspconfig')
 
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['gopls'].setup {
-    capabilities = capabilities
+local servers = {
+    "gopls",
+    "sumneko_lua",
+    "clangd",
+    "pyright",
+    "marksman",
+    "yamlls",
+    "html",
+    "cssls",
+    "tsserver"
 }
-require('lspconfig')['sumneko_lua'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['clangd'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['pyright'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['marksman'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['yamlls'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['html'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['cssls'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['tsserver'].setup {
-    capabilities = capabilities
-}
+
+-- iterate through servers and setup
+for _, lsp in ipairs(servers) do
+    nvim_lsp[lsp].setup {
+        capabilities = capabilities,
+    }
+end
