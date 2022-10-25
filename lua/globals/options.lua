@@ -30,5 +30,6 @@ vim.opt.listchars = {  -- see hidden chars and their colors
     trail = '·'
 }
 vim.o.list = true
+vim.o.cursorline = true
 vim.o.updatetime = 100
 
