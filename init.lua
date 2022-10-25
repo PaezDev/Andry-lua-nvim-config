@@ -5,7 +5,6 @@ vim.g.mapleader = " "
 -- See `./lua/globals
 require "globals.options"
 require "globals.remaps"
-
+require 'plugins.packer'
 require "lsp.lsp"
 
-require 'plugins.packer'

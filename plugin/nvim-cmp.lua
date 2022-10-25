@@ -1,4 +1,6 @@
 -- Reference: https://github.com/hrsh7th/nvim-cmp
+-- Reference: https://github.com/williamboman/nvim-lsp-installer
+-- setup up for autocomplete and LSP's
 
 local luasnip = require'luasnip'
 
@@ -84,6 +86,20 @@ cmp.setup.cmdline(':', {
 	}, {
 		{ name = 'cmdline' }
 	})
+})
+
+-- Setup lsp-installer
+require("nvim-lsp-installer").setup({
+    -- excludes rust_analyzer due to conflict with rust-tools
+    automatic_installation = { exclude = { "rust_analyzer" } }, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+
+    ui = {
+        icons = {
+            server_installed = "✓",
+            server_pending = "➜",
+            server_uninstalled = "✗"
+        }
+    }
 })
 
 -- Setup lspconfig.
