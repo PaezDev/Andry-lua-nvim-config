@@ -33,3 +33,5 @@ vim.o.list = true
 vim.o.cursorline = true
 vim.o.updatetime = 100
 
+-- font 
+vim.opt.guifont = { "MesloLGS NF", "h14" }
