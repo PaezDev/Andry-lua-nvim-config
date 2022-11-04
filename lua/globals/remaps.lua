@@ -27,6 +27,9 @@ map("n", "<Left>", ":vertical resize +1<CR>", silent_opts)
 map("n", "<Right>", ":vertical resize -1<CR>", silent_opts)
 map("n", "<Up>", ":resize +1<CR>", silent_opts)
 map("n", "<Down>", ":resize -1<CR>", silent_opts)
+-- save and close
+map("n", "<Leader>w", ":w<cr>", options)
+map("n", "<Leader>q", ":q<cr>", options)
 -- Terminal in new tab
 map('n', '<leader>t', '<cmd>tabnew<CR><cmd>term<CR>', options)
 -- Edit init.lua config file

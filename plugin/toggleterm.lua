@@ -21,4 +21,4 @@ function terminal1_toggle()
 end
 
 vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>lua terminal1_toggle()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<M-3>', '<cmd>lua terminal1_toggle()<CR>', {noremap = true, silent = true})
