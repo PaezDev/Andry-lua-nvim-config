@@ -14,7 +14,7 @@ map('n', '<C-l>', '<C-w>l', options)
 -- Buffer controls
 map('n', '<S-l>', '<cmd>bn<CR>', options) -- buffer next
 map('n', '<S-h>', '<cmd>bp<CR>', options) -- buffer previous
-map('n', '<S-c>', '<cmd>bd<CR>', options ) -- buffer delete
+map('n', '<Leader>c', '<cmd>bd<CR>', options ) -- buffer delete
 -- Window splitting
 map('n', '<leader>ws', '<C-w>s', options) -- horizontal
 map('n', '<leader>wv', '<C-w>v', options) -- vertical
